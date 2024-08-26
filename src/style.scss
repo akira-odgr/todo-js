@@ -1,0 +1,110 @@
+:root {
+    --bgColor: rgba(255, 255, 255, 0.5);
+    --bgColor-hover: #79a8a9;
+
+    --text-white: #fff;
+
+    --borderRadius: 0.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url(/images/bg.jpg) center center/cover no-repeat;
+}
+li {
+    list-style: none;
+}
+
+p {
+    color: var(--text-white);
+}
+
+button {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 4px 16px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--bgColor-hover);
+    }
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    translate: -50% -20%;
+    width: min(600px, calc(100% - 2rem));
+}
+
+.input-area {
+    display: flex;
+    gap: 1rem;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    height: 45px;
+    padding: 0.5rem;
+    margin: 8px auto;
+    border: 1px solid #aacfd0;
+    border-radius: var(--borderRadius);
+
+    input {
+        border-radius: var(--borderRadius);
+        border: none;
+        outline: none;
+        padding: 4px 16px;
+    }
+}
+
+.incomplete-area,
+.complete-area {
+    border: 1px solid #aacfd0;
+    min-height: 200px;
+    padding: 1.5rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: var(--borderRadius);
+    backdrop-filter: blur(5px);
+
+    .title {
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .list-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                display: flex;
+                gap: 6px;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0;
+                width: 100%;
+                max-width: 200px;
+                padding: 4px 8px;
+                border-radius: 0.5rem;
+                background: rgba(255, 255, 255, 0.5);
+                // min-width: 100px;
+            }
+        }
+    }
+}
